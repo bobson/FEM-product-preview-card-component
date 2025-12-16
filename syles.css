@@ -73,26 +73,11 @@
 @layer components {
     .product-card {
         background-color: var(--neutral-white);
-        width: 350px;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 340px auto;
+        grid-template-columns: 350px;
         border-radius: 0.5rem;
         margin-top: 2rem;
         overflow: hidden;
-    }
-
-    .product-image {
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-
-    .product-image img {
-        scale: 1.1;
-        position: absolute;
-        top: -2rem;
     }
 
     .product-content {
@@ -170,17 +155,16 @@
     @media (width > 768px) {
         .product-card {
             grid-template-columns: 300px 300px;
-            width: fit-content;
             grid-template-rows: auto;
+        }
+
+        .product-image img {
+            height: 100%;
         }
 
         .product-content {
             gap: 2rem;
         }
 
-        .product-image img {
-            object-fit: fill;
-            top: 10px;
-        }
     }
 }
